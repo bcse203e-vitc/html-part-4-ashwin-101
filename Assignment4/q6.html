@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Health Survey Form - 23BPS1184</title>
+    </head>
+    <body>
+        <h1>Health Survey Form</h1>
+        <form id="healthSurveyForm" action="/submit" method="POST">
+            <div id="page1">
+                <h2>Personal Details</h2>
+                <label for="fullname">Name: </label>
+                <input type="text" name="fullname" placeholder="Full Name"><br><br>
+                <label for="age">Age: </label>
+                <input type="number" name="age" placeholder="Age"><br><br>
+                <label for="gender">Gender: </label>
+                <input type="radio" name="gender" value="Male"> Male
+                <input type="radio" name="gender" value="Female"> Female
+                <input type="radio" name="gender" value="Other"> Other<br><br>
+                <label for="height">Height: </label>
+                <input type="text" name="height" placeholder="Height (cm)"><br><br>
+                <label for="weight">Weight: </label>
+                <input type="text" name="weight" placeholder="Weight (kg)"><br><br>
+                <button type="button" onclick="showPage(2)">Next</button>
+            </div>
+            <div id="page2" style="display:none;">
+                <h2>Lifestyle Questions</h2>
+                <label for="lifestyle">Lifestyle: </label><br>
+                <input type="checkbox" name="lifestyle" value="Smoking"> Smoking<br>
+                <input type="checkbox" name="lifestyle" value="Alcohol"> Alcohol<br>
+                <input type="checkbox" name="lifestyle" value="Exercise"> Regular Exercise<br>
+                <input type="checkbox" name="lifestyle" value="Healthy Diet"> Healthy Diet<br><br>
+                <label for="diet">Dietary Preference: </label>
+                <select name="diet">
+                    <option value="Vegetarian">Vegetarian</option>
+                    <option value="Non-Vegetarian">Non-Vegetarian</option>
+                    <option value="Vegan">Vegan</option>
+                </select><br><br>
+                <label for="activity">Activity Level: </label>
+                <select name="activity">
+                    <option value="Sedentary">Sedentary</option>
+                    <option value="Moderate">Moderate</option>
+                    <option value="Active">Active</option>
+                </select><br><br>
+                <button type="button" onclick="showPage(1)">Previous</button>
+                <button type="button" onclick="showPage(3)">Next</button>
+            </div>
+            <div id="page3" style="display:none;">
+                <h2>Optional Health Concerns</h2>
+                <label for="concerns">Health Concerns: </label><br>
+                <textarea name="concerns" rows="5" cols="40" placeholder="Describe any health concerns..."></textarea><br><br>
+                <button type="button" onclick="showPage(2)">Previous</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+
+        <script>
+            function showPage(pageNumber) {
+                document.getElementById('page1').style.display = 'none';
+                document.getElementById('page2').style.display = 'none';
+                document.getElementById('page3').style.display = 'none';
+                document.getElementById('page' + pageNumber).style.display = 'block';
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Online Quiz Submission Form</title>
+    </head>
+    <body>
+        <h1>Online Quiz Submission Form:</h1><br>
+        <form action="\submit" method="POST">
+            <label for="name">Name: </label>
+            <input type="text" name="name" placeholder="Your Name"><br><br>
+            
+            <label for="email">Email: </label>
+            <input type="email" name="email" placeholder="Your Email"><br><br>
+            
+            <h2>Questions:</h2>
+            
+            <label for="question1">1. What is the capital of France?</label><br>
+            <input type="radio" name="question1" value="Paris">
+            <label for="question1">Paris</label><br>
+            <input type="radio" name="question1" value="London">
+            <label for="question1">London</label><br>
+            <input type="radio" name="question1" value="Berlin">
+            <label for="question1">Berlin</label><br><br>
+            
+            <label for="question2">2. Which of the following are programming languages?</label><br>
+            <input type="checkbox" name="question2" value="Python">
+            <label for="question2">Python</label><br>
+            <input type="checkbox" name="question2" value="HTML">
+            <label for="question2">HTML</label><br>
+            <input type="checkbox" name="question2" value="CSS">
+            <label for="question2">CSS</label><br><br>
+            
+            <label for="timer">Remaining Time: </label>
+            <input type="text" name="timer" placeholder="Time Left" readonly><br><br>
+            
+            <button type="submit" value="Submit">Submit</button>
+        </form>
+    </body>
+</html>
