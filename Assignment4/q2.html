@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form for Online event - 23BPS1184</title>
+    </head>
+    <body>
+        <h1>Registration form:</h1><br>
+        <form action="\submit" method="POST">
+            <label for="fullname">Name: </label>
+            <input type="text" name="fullname" placeholder="Full Name"><br><br>
+            <label for="email">Email: </label>
+            <input type="email" name="email" placeholder="abc@example.com"><br><br>
+            <label for="phn">Phone number: </label>
+            <input type="tel" name="phn" min="10" max="10"><br><br>
+            <label for="gender">Gender: </label><br>
+            <input type="radio" name="gender" value="Male">
+            <label for="gender">Male</label>
+            <input type="radio" name="gender" value="Female">
+            <label for="gender">Female</label><br><br>
+            <label for="ageg">Age Group</label><br>
+            <select name="ageg">
+                <option value="select">SELECT</option>
+                <option value="Child">Child</option>
+                <option value="Adult">Adult</option>
+            </select><br><br>
+            <label for="addc">Additional Comments: </label><br>
+            <input type="textarea" name="addc"><br><br>
+            <button type="Submit" value="Register" name="Register">Register</button>
+        </form>
+    </body>
+</html>
