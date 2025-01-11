@@ -2,33 +2,6 @@
 <html>
     <head>
         <title>Product Order Form - 23BPS1184</title>
-        <script>
-            const products = {
-                "Product A": 50,
-                "Product B": 30,
-                "Product C": 20
-            };
-
-            function calculateTotal() {
-                const product = document.getElementById('product').value;
-                const quantity = document.getElementById('quantity').value;
-                const price = products[product] * quantity;
-                document.getElementById('totalPrice').innerText = 'Total Price: $' + price;
-            }
-
-            function applyCoupon() {
-                const coupon = document.getElementById('coupon').value;
-                let discount = 0;
-                if (coupon === 'DISCOUNT10') {
-                    discount = 10;
-                }
-                const product = document.getElementById('product').value;
-                const quantity = document.getElementById('quantity').value;
-                const price = products[product] * quantity;
-                const discountedPrice = price - (price * discount / 100);
-                document.getElementById('totalPrice').innerText = 'Total Price after discount: $' + discountedPrice;
-            }
-        </script>
     </head>
     <body>
         <h1>Product Order Form</h1>
@@ -41,12 +14,12 @@
             <input type="text" id="address" name="address" placeholder="Address"><br><br>
             <label for="product">Product: </label>
             <select id="product" name="product" onchange="calculateTotal()">
-                <option value="Product A">Product A - $50</option>
-                <option value="Product B">Product B - $30</option>
-                <option value="Product C">Product C - $20</option>
+                <option value="Product A">Product A - Rs.50</option>
+                <option value="Product B">Product B - Rs.30</option>
+                <option value="Product C">Product C - Rs.20</option>
             </select><br><br>
             <label for="quantity">Quantity: </label>
-            <input type="number" id="quantity" name="quantity" min="1" value="1" onchange="calculateTotal()"><br><br>
+            <input type="number" id="quantity" name="quantity" min="1" value="1"><br><br>
             <label>Delivery Preferences: </label>
             <input type="radio" id="standard" name="delivery" value="Standard">
             <label for="standard">Standard</label>
@@ -54,8 +27,8 @@
             <label for="express">Express</label><br><br>
             <label for="coupon">Apply Coupon: </label>
             <input type="text" id="coupon" name="coupon" placeholder="Coupon Code">
-            <button type="button" onclick="applyCoupon()">Apply</button><br><br>
-            <p id="totalPrice">Total Price: $0</p>
+            <button type="button">Apply</button><br><br>
+            <p id="totalPrice">Total Price: Rs.0</p>
             <button type="submit">Submit</button>
         </form>
     </body>
