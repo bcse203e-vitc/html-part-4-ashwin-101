@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Customizable Form Template 23BPS1184</title>
+    </head>
+    <body>
+        <h1>Customizable Form Template:</h1><br>
+        <form action="\submit" method="POST">
+            <label for="formName">Form Name: </label>
+            <input type="text" name="formName" placeholder="Enter Form Name"><br><br>
+
+            <label for="numFields">Number of Input Fields: </label>
+            <input type="number" name="numFields" min="1" max="10" placeholder="1-10"><br><br>
+
+            <label for="fieldType">Field Type: </label><br>
+            <select name="fieldType">
+                <option value="Text">Text</option>
+                <option value="Email">Email</option>
+                <option value="Number">Number</option>
+                <option value="Date">Date</option>
+            </select><br><br>
+
+            <label for="fieldLabel">Field Label: </label>
+            <input type="text" name="fieldLabel" placeholder="Enter Field Label"><br><br>
+            
+            <button type="submit">Generate Form</button>
+        </form>
+        <hr>
+        <h2>Preview of the Form:</h2>
+        <form action="\submit" method="POST">
+            <label for="generatedForm">Generated Form:</label><br>
+            <input type="text" name="generatedForm" placeholder="Generated fields will show here"><br><br>
+        </form>
+        
+    </body>
+</html>
