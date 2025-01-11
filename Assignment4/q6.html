@@ -20,9 +20,9 @@
                 <input type="text" name="height" placeholder="Height (cm)"><br><br>
                 <label for="weight">Weight: </label>
                 <input type="text" name="weight" placeholder="Weight (kg)"><br><br>
-                <button type="button" onclick="showPage(2)">Next</button>
+                <button type="button">Next</button>
             </div>
-            <div id="page2" style="display:none;">
+            <div id="page2">
                 <h2>Lifestyle Questions</h2>
                 <label for="lifestyle">Lifestyle: </label><br>
                 <input type="checkbox" name="lifestyle" value="Smoking"> Smoking<br>
@@ -41,14 +41,14 @@
                     <option value="Moderate">Moderate</option>
                     <option value="Active">Active</option>
                 </select><br><br>
-                <button type="button" onclick="showPage(1)">Previous</button>
-                <button type="button" onclick="showPage(3)">Next</button>
+                <button type="button">Previous</button>
+                <button type="button">Next</button>
             </div>
-            <div id="page3" style="display:none;">
+            <div id="page3">
                 <h2>Optional Health Concerns</h2>
                 <label for="concerns">Health Concerns: </label><br>
-                <textarea name="concerns" rows="5" cols="40" placeholder="Describe any health concerns..."></textarea><br><br>
-                <button type="button" onclick="showPage(2)">Previous</button>
+                <textarea name="concerns" rows="5" cols="40" placeholder="Describe any health concerns"></textarea><br><br>
+                <button type="button">Previous</button>
                 <button type="submit">Submit</button>
             </div>
         </form>
